@@ -58,9 +58,9 @@ nav a:hover {
 }
 
 .fm-logo {
-    position: fixed;
-    top: 25px;    /* Increased from 20px to 60px to move the image lower */
-    right: 40px;
+    position: absolute;
+    top: 10px;        /* Move it up a bit */
+    right: -100px;    /* Move it a little less far right */
     width: 110px;
     height: auto;
     transform: none;
