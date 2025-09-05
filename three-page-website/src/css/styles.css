@@ -3,12 +3,12 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #333;
-    background-color: #f0f8ff;
+    color: #fff; /* White text */
+    background-color: #222; /* Dark gray background */
 }
 
 header {
-    background: #000000;
+    background: #111; /* Almost black */
     color: #fff;
     padding: 1rem 0;
     text-align: center;
@@ -39,10 +39,11 @@ nav a {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: background 0.3s ease, transform 0.2s ease;
+    background: transparent;
 }
 
 nav a:hover {
-    background: #0056b3;
+    background: #444; /* Medium gray on hover */
     transform: scale(1.1);
 }
 
@@ -52,17 +53,32 @@ nav a:hover {
     max-width: 1200px;
 }
 
+.header .container {
+    position: relative;
+}
+
+.fm-logo {
+    position: fixed;
+    top: 25px;    /* Increased from 20px to 60px to move the image lower */
+    right: 40px;
+    width: 110px;
+    height: auto;
+    transform: none;
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
 .main-content {
     padding: 2rem 0;
 }
 
 .intro, .updates {
-    background: #fff;
+    background: #333; /* Dark gray */
     margin: 1rem 0;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff; /* Ensure white text */
 }
 
 .intro:hover, .updates:hover {
@@ -71,7 +87,7 @@ nav a:hover {
 }
 
 button {
-    background: #007BFF;
+    background: #444; /* Medium gray */
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
@@ -81,14 +97,20 @@ button {
 }
 
 button:hover {
-    background: #0056b3;
+    background: #666; /* Lighter gray on hover */
     transform: scale(1.05);
 }
 
 footer {
-    background: #333;
+    background: #111; /* Almost black */
     color: #fff;
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
 }
+
+/* Place this inside the <header> section of about.html and contact.html */
+<div class="container">
+    <img src="images/fm-logo.png" alt="FM Studios Logo" class="fm-logo">
+    <!-- ...rest of your header code... -->
+</div>
